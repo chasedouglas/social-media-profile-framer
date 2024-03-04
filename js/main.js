@@ -100,11 +100,13 @@ $(document).ready(function () {
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);
-        $('.step-two').addClass('hidden');
-        $('.step-three').removeClass('hidden');
+        setTimeout(function () {
+            $('.step-two').addClass('hidden');
+            $('.step-three').removeClass('hidden');
+        }, 700);
 
     });
-    $('#start').click(function () {
+    $('.start').click(function () {
         // $('.step-two').addClass('hidden');
         // $('.step-one').removeClass('hidden');
         location.reload();
