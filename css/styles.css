@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  min-height: 360px;
+  border-radius: 50%;
+}
+.canvas-wrapper {
+  max-width: 360px;
+  height: 360px;
+}
+
+select {
+  border: 1px solid lightgray;
+  padding: 10px;
+  width: 100%;
+}
