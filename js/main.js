@@ -36,6 +36,8 @@ $(document).ready(function() {
                 image.src = event.target.result;
             };
             reader.readAsDataURL(file);
+            $('.step-one').addClass('hidden');
+            $('.step-two').removeClass('hidden');
         }
     });
     // Load and draw the uploaded image
@@ -43,6 +45,7 @@ $(document).ready(function() {
         var reader = new FileReader();
         reader.onload = function(event) {
             image.onload = function() {
+                
                 canvas.width = 1500; // Set canvas dimensions to 360x360
                 canvas.height = 1500;
                 var hRatio = canvas.width / image.width;
@@ -56,19 +59,33 @@ $(document).ready(function() {
                 drawFrame(); // Draw frame over the image
             }
             image.src = event.target.result;
+            
         }
         reader.readAsDataURL(e.target.files[0]);
+        $('.step-one').addClass('hidden');
+            $('.step-two').removeClass('hidden');
     });
 
     // Function to draw the frame
     function drawFrame() {
-        var frameSrc = 'images/' + $('#frameSelect').val() +
-        '.png'; // Assuming frames are named 'frame1.png', 'frame2.png', etc.
+        var frameSrc = 'images/' + $('#frameSelect').val() + '.png'; // Assuming frames are named 'frame1.png', 'frame2.png', etc.
         frame.onload = function() {
+            // Clear the canvas and redraw the image before drawing the new frame
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Redraw the image
+            var hRatio = canvas.width / image.width;
+            var vRatio = canvas.height / image.height;
+            var ratio = Math.max(hRatio, vRatio); // Use the larger ratio to cover the canvas
+            var centerShift_x = (canvas.width - image.width * ratio) / 2;
+            var centerShift_y = (canvas.height - image.height * ratio) / 2;
+            ctx.drawImage(image, 0, 0, image.width, image.height,
+                          centerShift_x, centerShift_y, image.width * ratio, image.height * ratio);
+            // Draw the new frame
             ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
-        }
+        };
         frame.src = frameSrc;
     }
+    
 
     // Update frame when a new frame is selected
     $('#frameSelect').change(function() {
@@ -83,5 +100,10 @@ $(document).ready(function() {
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);
+    });
+    $('#start').click(function() {
+        // $('.step-two').addClass('hidden');
+        // $('.step-one').removeClass('hidden');
+        location.reload();
     });
 });
