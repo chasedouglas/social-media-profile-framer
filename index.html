@@ -4,8 +4,6 @@
 <head>
     <title>Photo Frame App</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="css/tailwind.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/main.js"></script>
 
@@ -37,15 +35,15 @@
         <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Select Your Easter Frame</label>
 
 
-        <select id="frameSelect" class="p-2">
+        <select id="frameSelect" class="border border-gray-200 p-2.5 w-full">
             <option value="#">Select A Frame</option>
             <option value="frame1">Frame 1</option>
             <option value="frame2">Frame 2</option>
             <option value="frame3">Frame 3</option>
             <!-- Add more frames as options here -->
         </select><br>
-        <div class="canvas-wrapper">
-            <canvas id="canvas" class="mt-5 mb-5 bg-gray-100"></canvas><br>
+        <div class="max-w-[360px] h-[360px]">
+            <canvas id="canvas" class="mt-5 mb-5 bg-gray-100 w-full h-auto min-h-[360px] rounded-full"></canvas><br>
         </div>
         <button id="download" type="button" class="mt-5 inline-flex items-center gap-x-2 rounded-md bg-indigo-600 px-3.5 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full text-center">
             Download Your Image
