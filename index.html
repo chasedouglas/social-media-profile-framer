@@ -1,163 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>C|Life Easter Photo Frame App</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link href="css/output.min.css" rel="stylesheet" />
-
-    <script src="js/main.js"></script>
+      <title>C|Life Easter Photo Frame App</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link href="css/output.min.css" rel="stylesheet" />
+      <script src="js/main.js"></script>
   </head>
-
   <body style="background: #2c72ad">
-    <div class="relative bg-white md:min-h-screen">
-      <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-        <div
-          class="relative flex flex-col items-center justify-center py-12 lg:-mr-8 xl:absolute xl:inset-0 xl:mr-0"
-          style="
-            background-image: url('images/background.jpg');
-            background-position: center;
-            background-size: cover;
-            min-height: 100vh;
-          "
-        >
-          <img class="mb-5 h-11" src="images/logo-white.png" />
-          <div class="bg-transparent bg-transparent border border-white p-4">
-            <div
-              class="bg-white p-10 pb-20 sm:mx-auto sm:w-full sm:max-w-md min-w-[360px] relative"
-            >
-              <div class="col-span-full">
-                <div class="step-one">
-                  <button
-                    class="bg-slate-900 absolute top-0 right-0 w-full inline-flex justify-center items-center gap-x-2 px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm"
-                    type="button"
-                  >
-                    <img
-                      src="images/clifelogoicon.svg"
-                      class="max-h-7 border border-solid border-white-1 rounded-full px-2 py-1"
-                    />
-
-                    Create Your Social Media Easter Frame
-                  </button>
-                  <h2 class="font-black text-3xl mt-5">Step 1:</h2>
-                  <label
-                    class="block text-sm font-medium leading-6 text-gray-900"
-                    for="cover-photo"
-                    >Upload Your Profile Photo</label
-                  >
-                  <div
-                    class="mb-5 mt-5 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-2"
-                    id="drop-zone"
-                  >
-                    <div class="text-center">
-                      <svg
-                        class="mx-auto h-12 w-12 text-gray-300"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      <div class="mt-4 flex text-sm leading-6 text-gray-600">
-                        <label
-                          class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                          for="upload"
-                        >
-                          <span>Click here to upload</span>
-                          <input
-                            class="sr-only"
-                            id="upload"
-                            type="file"
-                            accept="image/*"
-                          />
-                        </label>
-                        <p class="pl-1">or drag and drop</p>
+      <div class="relative bg-white md:min-h-screen">
+          <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+              <div class="relative flex flex-col items-center justify-center py-12 lg:-mr-8 xl:absolute xl:inset-0 xl:mr-0" style="background-image: url('images/background.jpg');background-position: center;background-size: cover;min-height: 100vh;">
+                  <img class="mb-5 h-11" src="images/logo-white.png" />
+                  <div class="p-4 bg-transparent border border-white">
+                      <div class="relative min-w-[360px] bg-white p-10 pb-20 sm:mx-auto sm:w-full sm:max-w-md">
+                          <div class="col-span-full">
+                              <div class="step-one">
+                                  <button class="absolute right-0 top-0 inline-flex w-full items-center justify-center gap-x-2 bg-slate-900 px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm" type="button">
+                                      <img class="px-2 py-1 border border-solid rounded-full border-white-1 max-h-7" src="images/clifelogoicon.svg" />
+                                      Create Your Social Media Easter Frame
+                                  </button>
+                                  <h2 class="mt-5 text-3xl font-black">Step 1:</h2>
+                                  <label class="block text-sm font-medium leading-6 text-gray-900" for="cover-photo">Upload Your Profile Photo</label>
+                                  <div class="flex justify-center px-6 py-2 mt-5 mb-5 border border-dashed rounded-lg border-gray-900/25" id="drop-zone">
+                                      <div class="text-center">
+                                          <svg class="w-12 h-12 mx-auto text-gray-300" aria-hidden="true"
+                                              viewBox="0 0 24 24" fill="currentColor">
+                                              <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clip-rule="evenodd" />
+                                          </svg>
+                                          <div class="flex mt-4 text-sm leading-6 text-gray-600">
+                                              <label class="relative font-semibold text-indigo-600 bg-white rounded-md cursor-pointer focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500" for="upload">
+                                                  <span>Click here to upload</span>
+                                                  <input class="sr-only" id="upload" type="file" accept="image/*" />
+                                              </label>
+                                              <p class="pl-1">or drag and drop</p>
+                                          </div>
+                                          <p class="text-xs leading-5 text-gray-600">
+                                              PNG, JPG, GIF up to 10MB
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="hidden step-two">
+                              <!-- <input id="upload" type="file" accept="image/*"/><br> -->
+                              <h2 class="mt-5 text-2xl font-black">Step 2:</h2>
+                              <label class="block text-sm font-medium leading-6 text-gray-900" for="cover-photo">Select
+                                  Your Favorite Easter Frame</label>
+                              <select class="w-full border border-gray-200 p-2.5" id="frameSelect">
+                                  <option value="frame1">Frame 1</option>
+                                  <option value="frame2">Frame 2</option>
+                                  <option value="frame3">Frame 3</option>
+                              </select><br />
+                              <div class="mb-2 mt-7 h-[360px] max-w-[360px] rounded-full">
+                                  <canvas class="h-auto min-h-[360px] w-full min-w-[360px] rounded-full bg-gray-100" id="canvas"></canvas><br />
+                              </div>
+                              <button class="absolute bottom-0 left-0 mt-5 inline-flex w-full w-full items-center justify-center gap-x-2 px-3.5 py-3.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" id="download" type="button" style="background: #e15740">
+                                  Download Your Image
+                                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                  </svg>
+                              </button>
+                              <button class="absolute right-0 top-0 inline-flex w-full items-center justify-center gap-x-2 bg-slate-900 px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" id="start" type="button">
+                                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                                  </svg>
+                                  Start Over
+                              </button>
+                          </div>
                       </div>
-                      <p class="text-xs leading-5 text-gray-600">
-                        PNG, JPG, GIF up to 10MB
-                      </p>
-                    </div>
                   </div>
-                </div>
               </div>
-              <div class="step-two hidden">
-                <!-- <input id="upload" type="file" accept="image/*"/><br> -->
-                <h2 class="font-black text-2xl mt-5">Step 2:</h2>
-                <label
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                  for="cover-photo"
-                  >Select Your Favorite Easter Frame</label
-                >
-
-                <select
-                  class="w-full border border-gray-200 p-2.5"
-                  id="frameSelect"
-                >
-                  <option value="frame1">Frame 1</option>
-                  <option value="frame2">Frame 2</option>
-                  <option value="frame3">Frame 3</option>
-                  <!-- Add more frames as options here --></select
-                ><br />
-                <div class="h-[360px] max-w-[360px] mb-2 mt-7 rounded-full">
-                  <canvas
-                    class="h-auto min-h-[360px] min-w-[360px] w-full rounded-full bg-gray-100"
-                    id="canvas"
-                  ></canvas
-                  ><br />
-                </div>
-                <button
-                  class="absolute bottom-0 left-0 w-full mt-5 inline-flex w-full items-center justify-center gap-x-2 px-3.5 py-3.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  id="download"
-                  type="button"
-                  style="background: #e15740"
-                >
-                  Download Your Image
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-                    />
-                  </svg>
-                </button>
-                <button
-                  class="bg-slate-900 absolute top-0 right-0 w-full inline-flex justify-center items-center gap-x-2 px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  id="start"
-                  type="button"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                    />
-                  </svg>
-
-                  Start Over
-                </button>
-              </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   </body>
 </html>
