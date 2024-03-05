@@ -95,8 +95,9 @@ $(document).ready(function () {
     // Download the final image
     $('#download').click(function () {
         var downloadLink = document.createElement('a');
-        downloadLink.href = canvas.toDataURL('image/png');
-        downloadLink.download = 'profile_with_frame.png';
+        // Adjust the quality parameter to reduce file size
+        downloadLink.href = canvas.toDataURL('image/jpeg', 0.75); // Compress with 75% quality
+        downloadLink.download = 'profile_with_frame.jpg';
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);
@@ -104,7 +105,6 @@ $(document).ready(function () {
             $('.step-two').addClass('hidden');
             $('.step-three').removeClass('hidden');
         }, 700);
-
     });
     $('.start').click(function () {
         // $('.step-two').addClass('hidden');

@@ -3,39 +3,37 @@
 
 <head>
     <title>C|Life Easter Photo Frame App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="css/output.min.css" rel="stylesheet" />
     <script src="js/main.js"></script>
 </head>
 
-<body style="background: #2c72ad">
+<body style="background: #2c72ad" class="p-0 m-0">
     <a href="https://clifec.com/easter">
         <div
-            class="fixed left-0 top-0 z-50 flex w-full items-center gap-x-6 bg-customYellow px-6 py-2.5 text-black hover:bg-black hover:text-white sm:px-3.5 sm:before:flex-1">
+            class="fixed left-0 top-0 z-50 flex w-full items-center gap-x-6 bg-customYellow px-6 py-2.5 text-black hover:bg-black hover:text-white sm:px-3.5 sm:before:flex-1 p-5">
             <p class="text-sm leading-6 text-center">
-                <strong class="font-semibold">Easter at cLife</strong><svg class="mx-2 inline h-0.5 w-0.5 fill-current"
-                    aria-hidden="true" viewBox="0 0 2 2">
-                    <circle cx="1" cy="1" r="1" />
-                </svg>Click here to see our locations and service times!<span aria-hidden="true">&rarr;</span>
+                <strong class="font-semibold">Easter at cLife - </strong>
+                See our locations and times!&nbsp;<span aria-hidden="true">&rarr;</span>
             </p>
             <div class="flex justify-end flex-1">
             </div>
         </div>
     </a>
     <div class="relative bg-white md:min-h-screen">
-        <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-            <div class="relative flex flex-col items-center justify-center py-12 lg:-mr-8 xl:absolute xl:inset-0 xl:mr-0"
-                style="background-image: url('images/background.jpg');background-position: center;background-size: cover;min-height: 100vh;">
+        <div class="mx-auto max-w-7xl">
+            <div class="relative flex flex-col items-center justify-center py-18 lg:-mr-8 xl:absolute xl:inset-0 xl:mr-0"
+                style="background-image: url('images/background.jpg');background-position: center;background-size: cover;min-height: 100vh; padding-top:100px;padding-bottom: 80px;">
                 <img class="mb-5 h-11" src="images/logo-white.png" />
-                <div class="p-4 bg-transparent border border-white">
-                    <div class="relative min-w-[360px] bg-white p-10 pb-20 sm:mx-auto sm:w-full sm:max-w-md">
+                <!-- <div class="p-4 bg-transparent border border-bg-white border-1px" style="max-width: 80vw;"> -->
+                    <div class="relative lg:w-[460px] w-full bg-white p-10 pb-20" style="max-width: 90vw;">
                         <div class="col-span-full">
                             <div class="step-one">
                                 <button
                                     class="absolute right-0 top-0 inline-flex w-full items-center justify-center gap-x-2 bg-slate-900 px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm"
                                     type="button">
-                                    <img class="px-2 py-1 border border-solid rounded-full border-white-1 max-h-7"
-                                        src="images/clifelogoicon.svg" />
+                  
                                     Create Your Social Media Easter Frame
                                 </button>
                                 <h2 class="text-3xl font-black mt-9">Step 1:</h2>
@@ -50,12 +48,12 @@
                                                 d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
                                                 clip-rule="evenodd" />
                                         </svg>
-                                        <div class="flex mt-4 text-sm leading-6 text-gray-600">
+                                        <div class="flex flex-col mt-4 text-sm leading-6 text-gray-600">
                                             <label
                                                 class="relative font-semibold text-indigo-600 bg-white rounded-md cursor-pointer focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
                                                 for="upload">
-                                                <span>Click here to upload</span>
-                                                <input class="sr-only" id="upload" type="file" accept="image/*" />
+                                                <span>Click here to upload</span><br>
+                                                <input class="sr-only" id="upload" type="file" />
                                             </label>
                                             <p class="pl-1">or drag and drop</p>
                                         </div>
@@ -66,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="hidden step-two">
+                        <div class="hidden step-two sm:max-w-[360px]">
                             <!-- <input id="upload" type="file" accept="image/*"/><br> -->
                             <h2 class="mt-5 text-2xl font-black">Step 2:</h2>
                             <label class="block text-sm font-medium leading-6 text-gray-900" for="cover-photo">Select
@@ -76,8 +74,8 @@
                                 <option value="frame2">Frame 2</option>
                                 <option value="frame3">Frame 3</option>
                             </select><br />
-                            <div class="mb-2 mt-7 h-[360px] max-w-[360px] rounded-full">
-                                <canvas class="h-auto min-h-[360px] w-full min-w-[360px] rounded-full bg-gray-100"
+                            <div class="mb-2 rounded-full mt-7 min-h-[250px] w-full min-w-[250px] sm:max-w-[250px] sm:max-h-[250px]">
+                                <canvas class="h-auto min-h-[250px] w-full min-w-[250px] sm:max-w-[250px] sm:max-h-[250px] rounded-full bg-gray-100"
                                     id="canvas"></canvas><br />
                             </div>
                             <button
@@ -156,7 +154,7 @@
 
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
